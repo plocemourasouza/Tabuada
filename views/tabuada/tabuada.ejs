@@ -1,0 +1,34 @@
+<%- include ('../partials/header.ejs') %>
+
+<div class="bg-success p-5 text-center shadow-sm">
+  <h1 class="text-white">Tabuada do número <%= num %></h1>
+</div>
+<div class="bg-light album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+      <% let j = 1 %> <% let z = 1 %> <% for(let x=1; x <=10; x++) { %>
+      <div class="col">
+        <!-- /INI -->
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <table class="table table-striped table-bordered table-hover rounded">
+              <% for(let i=j; i <=(j+9); i++) { %>
+              <tr>
+                <td class="p-1"><%= num %></td>
+                <td class="p-1">x</td>
+                <td class="p-1"><%= i %></td>
+                <td>=</td>
+                <td class="p-1"><%= num*i %></td>
+              </tr>
+              <% z++ } j = z %>
+            </table>
+          </div>
+        </div>
+        <!-- /FIM -->
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<%- include ('../partials/footer.ejs') %>

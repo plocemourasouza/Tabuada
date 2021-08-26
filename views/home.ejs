@@ -1,0 +1,31 @@
+<%- include ('partials/header.ejs') %>
+
+<div class="bg-primary p-5 text-center shadow-sm">
+  <h1 class="text-white">Tabuadas de 1 a 100</h1>
+</div>
+
+<div class="bg-light album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+      <% let j = 1 %>
+      <% let z = 1 %>
+      <% for(let x=1; x <=10; x++) { %>
+      <div class="col">
+        <!-- /INI -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <% for(let i=j; i <=(j+9); i++) { %>
+            <p class="card-text">
+              <a class="btn btn-md btn-outline-secondary w-100" href="/tabuada/do/<%= i %>">Tabuada do <%= i %> </a>
+            </p>
+            <% z++ } j = z %>
+          </div>
+        </div>
+        <!-- /FIM -->
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>
